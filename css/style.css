@@ -1,106 +1,196 @@
-/* Reset de margens e preenchimentos para manter a página organizada */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e borda não alterem o tamanho real dos elementos */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo do tamanho total do elemento */
 }
 
-/* Define a altura mínima da página e organiza os elementos em coluna */
 body {
-    font-family: Arial, sans-serif; /* Define a fonte principal */
-    background-color: #71B9EE; /* Fundo azul claro */
-    display: flex;
-    flex-direction: column; /* Organiza os elementos do body em coluna */
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    font-family: Arial, sans-serif; /* Define a fonte usada no corpo da página */
+    background-color: #71B9EE; /* Define a cor de fundo como azul claro */
+    display: flex; /* Utiliza flexbox para o layout */
+    flex-direction: column; /* Organiza os elementos dentro do body de forma vertical */
+    min-height: 100vh; /* Define a altura mínima do body para 100% da altura da tela */
+    padding: 0; /* Remove o preenchimento do body */
+    margin: 0; /* Remove a margem do body */
 }
 
-/* Cabeçalho fixo no topo */
 header {
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco */
-    display: flex; /* Organiza os elementos em linha */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 10px;
-    width: 100%;
-    position: fixed; /* Mantém o cabeçalho fixo no topo */
-    top: 0;
-    left: 0;
-    z-index: 10; /* Mantém o cabeçalho sobre outros elementos */
+    background-color: black; /* Define o fundo do header como preto */
+    color: white; /* Define a cor do texto no header como branco */
+    display: flex; /* Utiliza flexbox para o layout dentro do header */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 10px; /* Define um preenchimento de 10px ao redor do conteúdo no header */
+    justify-content: flex-start; /* Alinha os itens à esquerda no header */
+    width: 100%; /* O header ocupará 100% da largura da tela */
+    position: fixed; /* O header fica fixo no topo da tela */
+    top: 0; /* Define a posição do header no topo da tela */
+    left: 0; /* Define a posição do header à esquerda da tela */
+    z-index: 10; /* Coloca o header acima de outros elementos */
 }
 
 .nuvem {
-    width: 40px; /* Tamanho do ícone */
-    margin-right: 10px;
+    width: 40px; /* Define a largura da imagem da nuvem */
+    margin-right: 10px; /* Adiciona um espaço de 10px à direita da imagem */
 }
 
-/* Configuração da área principal */
+h2 {
+    font-size: 20px; /* Define o tamanho da fonte de h2 para 20px */
+    font-family: 'Arial', sans-serif; /* Define a fonte usada no h2 */
+}
+
 .principal {
-    flex: 1; /* Faz o conteúdo principal ocupar todo o espaço disponível */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-top: 60px; /* Para não sobrepor o header fixo */
-    width: 100%;
+    flex: 1; /* Faz o elemento ocupar o espaço restante */
+    display: flex; /* Utiliza flexbox para o layout */
+    flex-direction: column; /* Organiza os elementos de forma vertical */
+    align-items: center; /* Alinha os itens horizontalmente no centro */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    padding: 20px; /* Adiciona um preenchimento de 20px ao redor */
+    margin-top: 60px; /* Deixa um espaço de 60px no topo, para não sobrepor o header fixo */
+    width: 100%; /* O conteúdo ocupará 100% da largura disponível */
 }
 
-/* Estilização do título */
 .titulo {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 3rem;
-    color: white;
+    text-align: center; /* Centraliza o título */
+    margin-top: 40px; /* Adiciona uma margem de 40px acima do título */
+    font-size: 3rem; /* Define o tamanho da fonte como 3rem (relativo ao tamanho da fonte base) */
+    color: white; /* Define a cor do texto como branco */
+    font-family: 'Serif', serif; /* Define a fonte do título como uma fonte serifada */
 }
 
-/* Estilização do conteúdo principal */
 .conteudo {
-    max-width: 100%;
-    width: 600px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Define que a largura máxima do conteúdo será 100% */
+    width: 600px; /* Define que a largura do conteúdo será 100% */
+    background-color: white; /* Define o fundo do conteúdo como branco */
+    padding: 2rem; /* Adiciona um preenchimento de 2rem ao redor do conteúdo */
+    border-radius: 20px; /* Adiciona bordas arredondadas de 20px no conteúdo */
+    display: flex; /* Utiliza flexbox para o layout */
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    align-items: center; /* Alinha os itens no centro */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    margin-top: 20px; /* Adiciona um espaço de 20px acima do conteúdo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil ao redor do conteúdo */
 }
 
-/* Estilização do botão de conversão */
-#converter {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 20px auto;
-    font-size: 1.2rem;
-    text-align: center;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    max-width: 400px;
+.input-group {
+    display: flex; /* Utiliza flexbox para o layout do grupo de entradas */
+    flex-direction: column; /* Organiza os elementos de forma vertical */
+    width: 100%; /* Define que o grupo de entradas ocupará 100% da largura */
+    margin-bottom: 15px; /* Adiciona um espaço de 15px abaixo do grupo de entradas */
 }
 
-/* Área de resultado escondida até ser preenchida */
-#resultado {
-    margin-top: 20px;
-    background-color: black;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    width: 100%;
-    max-width: 400px;
-    display: none;
+.input-group .form-select,
+.input-group .form-control {
+    border-radius: 10px; /* Adiciona bordas arredondadas aos campos de entrada */
+    margin-bottom: 10px; /* Adiciona um espaço de 10px abaixo dos campos */
+    width: 100%; /* Os campos de entrada ocuparão 100% da largura do grupo */
 }
 
-/* Rodapé no final da página */
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
-    margin-top: auto; /* Empurra o rodapé para o final */
+    background-color: black; /* Define o fundo do rodapé como preto */
+    color: white; /* Define a cor do texto no rodapé como branco */
+    text-align: center; /* Centraliza o texto no rodapé */
+    width: 100%; /* O rodapé ocupará 100% da largura da tela */
+    padding: 10px 0; /* Adiciona 10px de preenchimento no topo e no fundo do rodapé */
+    position: absolute; /* O rodapé será posicionado de forma absoluta */
+    bottom: 0; /* Posiciona o rodapé no fundo da tela */
+    left: 0; /* Alinha o rodapé à esquerda da tela */
+    right: 0; /* Alinha o rodapé à direita da tela */
+    
+}
+
+footer h4 {
+    font-size: 1rem; /* Define o tamanho da fonte do h4 no rodapé */
+    margin: 0; /* Remove a margem do h4 no rodapé */
+}
+
+.form-control, .form-select {
+    background-color: black; /* Define o fundo dos campos como preto */
+    color: white; /* Define a cor do texto nos campos como branco */
+    border: 1px solid white; /* Adiciona uma borda branca aos campos */
+    font-size: 1rem; /* Define o tamanho da fonte dos campos como 1rem */
+}
+
+.form-control::placeholder, .form-select option {
+    color: white; /* Define a cor do texto dos placeholders e das opções como branco */
+}
+
+.form-select {
+    -webkit-appearance: none; /* Remove o estilo padrão do select no Safari */
+    -moz-appearance: none; /* Remove o estilo padrão do select no Firefox */
+    appearance: none; /* Remove o estilo padrão do select nos navegadores modernos */
+}
+
+#converter {
+    background-color: black; /* Define o fundo do botão de conversão como preto */
+    color: white; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda do botão */
+    padding: 12px 20px; /* Adiciona preenchimento de 12px em cima/baixo e 20px nas laterais */
+    margin: 20px auto; /* Adiciona margem acima e abaixo, e centraliza horizontalmente */
+    font-size: 1.2rem; /* Define o tamanho da fonte no botão como 1.2rem */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas de 5px ao botão */
+    display: block; /* Faz o botão ser um bloco */
+    width: 100%; /* Faz o botão ocupar 100% da largura disponível */
+    max-width: 400px; /* Define a largura máxima do botão como 400px */
+}
+
+#resultado {
+    margin-top: 20px; /* Adiciona um espaço de 20px acima do resultado */
+    background-color: black; /* Define o fundo do resultado como preto */
+    color: white; /* Define a cor do texto do resultado como branco */
+    padding: 15px; /* Adiciona 15px de preenchimento ao redor do resultado */
+    text-align: center; /* Centraliza o texto dentro do resultado */
+    border-radius: 10px; /* Adiciona bordas arredondadas de 10px ao resultado */
+    font-size: 1.2rem; /* Define o tamanho da fonte do resultado como 1.2rem */
+    width: 100%; /* Faz o resultado ocupar 100% da largura disponível */
+    max-width: 400px; /* Define a largura máxima do resultado como 400px */
+    margin: 0 auto; /* Centraliza o resultado horizontalmente */
+    display: none; /* Inicialmente, o resultado está escondido */
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem; /* Reduz o tamanho da fonte do título em telas menores */
+    }
+
+    .conteudo {
+        padding: 1.5rem; /* Reduz o preenchimento do conteúdo em telas menores */
+    }
+
+    #converter {
+        font-size: 1rem; /* Reduz o tamanho da fonte do botão em telas menores */
+        padding: 10px; /* Reduz o preenchimento do botão em telas menores */
+    }
+
+    .form-control, .form-select {
+        font-size: 1rem; /* Reduz o tamanho da fonte dos campos em telas menores */
+    }
+
+    .principal {
+        margin-top: 80px; /* Aumenta o espaço acima do conteúdo para compensar o header fixo */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Adiciona 10px de preenchimento ao redor do body em telas muito pequenas */
+    }
+
+    .titulo {
+        font-size: 2rem; /* Reduz ainda mais o tamanho do título em telas pequenas */
+    }
+
+    #converter {
+        font-size: 0.9rem; /* Reduz ainda mais o tamanho da fonte do botão em telas muito pequenas */
+        padding: 8px; /* Reduz ainda mais o preenchimento do botão em telas pequenas */
+    }
+
+    .form-control, .form-select {
+        font-size: 0.9rem; /* Reduz ainda mais o tamanho da fonte dos campos em telas pequenas */
+    }
+
+    .principal {
+        margin-top: 80px; /* Ajusta o espaço para header em telas pequenas */
+    }
 }
