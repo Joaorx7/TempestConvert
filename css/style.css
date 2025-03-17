@@ -72,10 +72,41 @@ footer h4 {
 }
 
 .form-control, .form-select {
-    background-color: black; /* Define o fundo dos campos como preto */
-    color: white; /* Define a cor do texto nos campos como branco */
-    border: 1px solid white; /* Adiciona uma borda branca aos campos */
-    font-size: 16px; /* Define o tamanho da fonte dos campos como 16px */
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    border: 1px solid white; /* Borda branca */
+    font-size: 16px; /* Tamanho da fonte */
+    overflow-y: auto; /* Garante que a rolagem apareça quando necessário */
+}
+
+/* Personalizando a barra de rolagem */
+.form-control::-webkit-scrollbar, .form-select::-webkit-scrollbar {
+    width: 8px; /* Largura da barra */
+}
+
+.form-control::-webkit-scrollbar-track, .form-select::-webkit-scrollbar-track {
+    background: #333; /* Fundo do trilho da rolagem */
+}
+
+.form-control::-webkit-scrollbar-thumb, .form-select::-webkit-scrollbar-thumb {
+    background: #000; /* Cor da barra de rolagem */
+    border-radius: 6px; /* Arredondamento da barra */
+}
+
+.form-control::-webkit-scrollbar-thumb:hover, .form-select::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor ao passar o mouse */
+}
+
+#valor::-webkit-outer-spin-button, #valor::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#valor {
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    border: 1px solid white; /* Borda branca */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
 #converter {
