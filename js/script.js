@@ -8,7 +8,7 @@ document.getElementById('converter').addEventListener('click', async function() 
     const moedaDestino = document.getElementById('moedaDestino').value;
     
     // Pega o valor digitado pelo usuário para conversão e converte para número (float)
-    const valor = document.getElementById('valor').value;
+    const valor = parseFloat(document.getElementById('valor').value).toFixed(2);
 
     // Verifica se o valor não é um número ou se o valor é menor ou igual a 0
     if (isNaN(valor) || valor <= 0) {
