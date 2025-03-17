@@ -25,7 +25,7 @@ document.getElementById('converter').addEventListener('click', async function() 
             throw new Error('Erro ao obter dados da API.');
         }
 
-        // Converte a resposta da API para um objeto JSON
+        //  Converte a resposta da API (JSON) em um objeto JavaScript e armazena na variável data.
         const data = await response.json();
 
         // Obtém a taxa de câmbio para a moeda de destino a partir dos dados da API
